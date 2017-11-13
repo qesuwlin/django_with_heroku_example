@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
+from .import views
 urlpatterns = [
-    url(r'^polls/', include('polls.urls')),
-    url(r'^sakura/', include('sakura.urls')),
+    url(r'^$', views.index, name ='home'),
+    url(r'^polls/', include('polls.urls'), name ='polls'),
+    url(r'^sakura/', include('sakura.urls'), name='sakura' ),
     url(r'^admin/', admin.site.urls),
 ]
