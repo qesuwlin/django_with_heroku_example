@@ -2,3 +2,4 @@ venc
 *.pyc
 staticfiles
 .env
+.idea
